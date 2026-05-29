@@ -15,7 +15,7 @@ def atualizar_estoque():
 
 def menu():
     while True:
-        print("\n--- MENU SCES ---")
+        print("\n----- Sistema De Controle De Estoque Simplificado (SCES) -----")
         print("1. Adicionar")
         print("2. Listar")
         print("3. Buscar")
