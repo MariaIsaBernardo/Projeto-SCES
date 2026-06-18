@@ -1,3 +1,5 @@
+#Ajudinha da bia brito
+
 pelucia = [
    [3421, "Pato", 458, "Prateleira B-22"],
    [4321, "Jacaré", 305, "Prateleira F-35"],
@@ -21,17 +23,31 @@ def adicionar_produto():
 
 
 def listar_produtos():
-    print("\n--- Função Listar Produtos ---")
+    print("\n--- Listar Produtos ---")
     if opcao == "2":
        print("\n-- Estoque Atual --")
     for produto in pelucia:
         print(f"ID: {produto[0]} | Nome: {produto[1]} | Quantidade: {produto[2]} | Local: {produto[3]}")
 
-def buscarproduto_id():
-    print("\n--- Função Buscar por ID ---")
+def procurarproduto_id():
+    print("\n--- Procurar ID ---")
+    print("\n-- Procurar Produto --")
+
+    id_busca = int(input("Digite o ID do produto: "))
+    procurar = False
+        
+    for produto in pelucia:
+        if produto[0] == id_busca:
+            print(f"Produto --> Nome: {produto[1]} | Quantidade: {produto[2]} | Local: {produto[3]}")
+            procurar = True
+            break
+
+    if procurar == False:
+        print("Produto nao encontrado.")
 
 def atualizar_estoque():
     print("\n--- Função Atualizar Estoque ---")
+    
 
 
 def menu():
@@ -40,7 +56,7 @@ def menu():
         print("\nBem vindo ao menu interativo da SCES! Por favor selecione uma opção:\n")
         print("1 - Adicionar")
         print("2 - Listar")
-        print("3 - Buscar")
+        print("3 - Procurar")
         print("4 - Atualizar")
         print("5 - Sair")
         
@@ -51,7 +67,7 @@ def menu():
         elif opcao == "2":
             listar_produtos()
         elif opcao == "3":
-            buscarproduto_id()
+            procurarproduto_id()
         elif opcao == "4":
             atualizar_estoque()
         elif opcao == "5":
