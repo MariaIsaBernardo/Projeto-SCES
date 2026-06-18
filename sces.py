@@ -21,7 +21,11 @@ def adicionar_produto():
 
 
 def listar_produtos():
-    print("\n--- Função Listar Produtos  ---")
+    print("\n--- Função Listar Produtos ---")
+    if opcao == "2":
+       print("\n-- Estoque Atual --")
+    for produto in pelucia:
+        print(f"ID: {produto[0]} | Nome: {produto[1]} | Quantidade: {produto[2]} | Local: {produto[3]}")
 
 def buscarproduto_id():
     print("\n--- Função Buscar por ID ---")
