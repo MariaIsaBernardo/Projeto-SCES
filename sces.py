@@ -1,4 +1,34 @@
-estoque = []
+pelucia = [
+   [3421, "Pato", 458, "Prateleira B-22"],
+   [4321, "Jacaré", 305, "Prateleira F-35"],
+   [6234, "Gato", 687, "Prateleira A-1"],
+   [2340, "Cachorro", 566, "Prateleira A-3"],
+   [3456, "Cobra", 354, "Prateleira F-37"]
+]
+
+opcao = "0"
+
+def adicionar_produto():
+    print("\n--- Adicionar Produto ---")
+    print("\n-- Novo Produto --")
+    id_produto = int(input("Digite o ID (Número): "))
+    nome = input("Digite o Nome: ")
+    qtd = int(input("Digite a Quantidade: "))
+    local = input("Digite a Localização (Ex: A-01): ")
+
+    pelucia.append([id_produto, nome, qtd, local])
+    print("Produto cadastrado!")
+
+
+def listar_produtos():
+    print("\n--- Função Listar Produtos  ---")
+
+def buscarproduto_id():
+    print("\n--- Função Buscar por ID ---")
+
+def atualizar_estoque():
+    print("\n--- Função Atualizar Estoque ---")
+
 
 def menu():
     while True:
