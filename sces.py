@@ -1,11 +1,11 @@
 #Ajudinha da bia brito
 
 pelucia = [
-   [3421, "Pato", 458, "Prateleira B-22"],
-   [4321, "Jacaré", 305, "Prateleira F-35"],
-   [6234, "Gato", 687, "Prateleira A-1"],
-   [2340, "Cachorro", 566, "Prateleira A-3"],
-   [3456, "Cobra", 354, "Prateleira F-37"]
+   [3421, "Pato", 458, "B-22"],
+   [4321, "Jacaré", 305, "F-35"],
+   [6234, "Gato", 687, "A-1"],
+   [2340, "Cachorro", 566, "A-3"],
+   [3456, "Cobra", 354, "F-37"]
 ]
 
 opcao = "0"
@@ -21,13 +21,12 @@ def adicionar_produto():
     pelucia.append([id_produto, nome, qtd, local])
     print("Produto cadastrado!")
 
-
 def listar_produtos():
     print("\n--- Listar Produtos ---")
     if opcao == "2":
        print("\n-- Estoque Atual --")
     for produto in pelucia:
-        print(f"ID: {produto[0]} | Nome: {produto[1]} | Quantidade: {produto[2]} | Local: {produto[3]}")
+        print(f"ID: {produto[0]} | Nome: {produto[1]} | Quantidade: {produto[2]} | Local: Prateleira {produto[3]}")
 
 def procurarproduto_id():
     print("\n--- Procurar ID ---")
@@ -47,7 +46,6 @@ def procurarproduto_id():
 
 def atualizar_estoque():
     print("\n--- Atualizar Estoque ---")
-    print("\n-- Atualizar Estoque --")
 
     id_busca = int(input("Digite o ID do produto: "))
     achou = False
