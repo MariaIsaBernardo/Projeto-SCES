@@ -46,7 +46,30 @@ def procurarproduto_id():
         print("Produto nao encontrado.")
 
 def atualizar_estoque():
-    print("\n--- Função Atualizar Estoque ---")
+    print("\n--- Atualizar Estoque ---")
+    print("\n-- Atualizar Estoque --")
+
+    id_busca = int(input("Digite o ID do produto: "))
+    achou = False
+        
+    for produto in pelucia:
+        if produto[0] == id_busca:
+            achou = True
+            print(f"Produto: {produto[1]} (Quantidade Atual: {produto[2]})")
+            print("1 - Adicionar | 2 - Retirar ")
+            tipo = input("Escolha a operacao: ")
+            valor = int(input("Quantidade a alterar: "))
+                
+            if tipo == "1":
+                produto[2] = produto[2] + valor
+                print(f"A quantidade de pelucias {produto[1]} foi aumentada!")
+            elif tipo == "2":
+                produto[2] = produto[2] - valor
+                print("A quantidade de pelucias {produto[1]} foi reduzida!")
+            break
+                    
+    if achou == False:
+        print("Produto nao encontrado.")
     
 
 
